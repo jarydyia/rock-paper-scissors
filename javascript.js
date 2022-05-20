@@ -27,9 +27,25 @@ function gameRound(playerSelection, computerSelection){
 
     if (playerChoice === "ROCK" && computerChoice=== "ROCK"){
         console.log("YOU BOTH CHOSE ROCK, IT IS A TIE!");
+        return "YOU BOTH CHOSE ROCK, IT IS A TIE!";
     } else if (playerChoice === "ROCK" && computerChoice === "SCISSORS"){
         console.log("PLAYER CHOSE ROCK , COMPUTER CHOSE SCISSORS ... PLAYER WINS!!");
+        return "PLAYER CHOSE ROCK , COMPUTER CHOSE SCISSORS ... PLAYER WINS!!";
     } else if (playerChoice === "ROCK" && computerChoice === "PAPER"){
         console.log("PLAYER CHOSE ROCK, COMPUTER CHOSE PAPER.... PLAYER LOSES") // PLAYER ROCK CHOICES DONE.... NOW DO PAPER
-    } 
+        return "PLAYER CHOSE ROCK, COMPUTER CHOSE PAPER.... PLAYER LOSES";
+
+
+    } else if (playerChoice === "PAPER" && computerChoice === "PAPER"){
+        console.log("Both chose paper, it is a tie")
+        return "Both chose paper it is a tie";
+    } else if (playerChoice === "PAPER" && computerChoice === "ROCK"){
+        console.log("Player- Paper.... Computer - Rock...... YOU WIN")
+        return "Player- Paper.... Computer - Rock...... YOU WIN";
+    }else if (playerChoice === "PAPER" && computerChoice === "SCISSORS"){
+        console.log("Player- Paper... Computer - Scissors... YOU LOSE")
+        return "Player- Paper... Computer - Scissors... YOU LOSE";
+    }
+
+    
 }
