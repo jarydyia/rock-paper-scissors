@@ -27,7 +27,7 @@ let computerScore = 0;
 
 
 
-function gameRound(playerSelection){
+function gameRound(){
     
     let computerSelection = computerPlay();
     let playerChoice = prompt("Please chose rock, paper or scissors").toUpperCase();// player puts in choice
@@ -75,7 +75,7 @@ function gameRound(playerSelection){
 
 function game(){
     for(let i = 0; i < 5; i++){// for i starts at 0... to run until i is greater than 5... increase while i is less than 5
-        gameRound(playerSelection)
+        gameRound()
     }
     console.log("Computer -- " + computerScore)
     console.log("Player -- " + playerScore)
