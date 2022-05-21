@@ -3,23 +3,24 @@
 // let turtle = "RRKWNWNFW"
 // console.log(turtle.toLocaleLowerCase())
 // console.log(computerPlay().toUpperCase())
+
 function computerPlay(){
       // gives you a random number from 1 - 3
       let randomNumber = (Math.floor(Math.random(4) * 3) + 1);
 
     if (randomNumber === 1){
-        console.log("Rock");
+        // console.log("Rock");
         return "Rock";
     } else if ( randomNumber === 2 ){
-        console.log("Paper");
+        // console.log("Paper");
         return "Paper";
     } else if (randomNumber === 3){
-        console.log("Scissors");
+        // console.log("Scissors");
         return "Scissors";
     }
 }
 
-let playerSelection = "paper";
+// let playerSelection;
 let playerScore = 0;
 let computerScore = 0;
 // let computerSelection = computerPlay(); global variable value is not changed from a function. can only be changed in local variable when called
@@ -27,10 +28,9 @@ let computerScore = 0;
 
 
 function gameRound(playerSelection){
+    
     let computerSelection = computerPlay();
-
-
-    let playerChoice = playerSelection.toUpperCase();
+    let playerChoice = prompt("Please chose rock, paper or scissors").toUpperCase();// player puts in choice
     let computerChoice = computerSelection.toUpperCase();
     // makes case insensitive  and simple to read
 
