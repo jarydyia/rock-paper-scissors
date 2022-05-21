@@ -19,7 +19,7 @@ function computerPlay(){
     }
 }
 
-let playerSelection = "rock";
+let playerSelection = "paper";
 let playerScore = 0;
 let computerScore = 0;
 // let computerSelection = computerPlay(); global variable value is not changed from a function. can only be changed in local variable when called
@@ -51,9 +51,11 @@ function gameRound(playerSelection){
         return "Both chose paper it is a tie";
     } else if (playerChoice === "PAPER" && computerChoice === "ROCK"){
         console.log("Player- Paper.... Computer - Rock...... YOU WIN")
+        playerScore++;
         return "Player- Paper.... Computer - Rock...... YOU WIN";
     }else if (playerChoice === "PAPER" && computerChoice === "SCISSORS"){
         console.log("Player- Paper... Computer - Scissors... YOU LOSE")
+        computerScore++;
         return "Player- Paper... Computer - Scissors... YOU LOSE";
 
     }else if (playerChoice === "SCISSORS" && computerChoice === "SCISSORS"){
@@ -61,9 +63,11 @@ function gameRound(playerSelection){
         return "Player - Scissors... Computer- Scissors ... TIE" ;
     }else if (playerChoice === "SCISSORS" && computerChoice === "ROCK"){
         console.log("Player- Scissors ... Computer - Rock ... YOU LOSE");
+        computerScore++;
         return "Player- Scissors ... Computer - Rock ... YOU LOSE";
     }else if  (playerChoice === "SCISSORS" && computerChoice === "PAPER"){
         console.log("Player - Scissors ... Computer - Paper ... YOU WIN")
+        playerScore++;
         return "Player- Scissors ... Computer - PAPER ... YOU WIN";
     }
 }
